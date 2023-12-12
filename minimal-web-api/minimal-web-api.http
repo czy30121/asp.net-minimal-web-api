@@ -1,0 +1,40 @@
+﻿@minimal-web-api_HostAddress = https://localhost:7093
+
+POST {{minimal-web-api_HostAddress}}/todoitems
+Content-Type: application/json
+
+{
+  "name": "walk dog",
+  "isComplete": true
+}
+###
+
+GET {{minimal-web-api_HostAddress}}/todoitems
+
+###
+
+GET {{minimal-web-api_HostAddress}}/todoitems/2
+
+###
+
+PUT {{minimal-web-api_HostAddress}}/todoitems/2
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "feed fish",
+  "isComplete": false
+}
+###
+
+DELETE {{minimal-web-api_HostAddress}}/todoitems/1
+
+###
+
+GET {{minimal-web-api_HostAddress}}/todoitems
+
+###
+
+GET {{minimal-web-api_HostAddress}}/todoitems/{id}
+
+###
